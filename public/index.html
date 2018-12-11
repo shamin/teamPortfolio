@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./public/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <title>Team Awesome</title>
+  </head>
+  <body>
+    <header>
+      <a href="#home"><span class="fab fa-font-awesome-flag fa-2x" id="logo"></span></a>
+      <nav id="navbar">
+        <a href="#about-section">About</a>
+        <a href="#team-section">Team</a>
+        <a href="#contact-section">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section id="about-section">
+          <header>
+            <h1>Team Awesome</h1>
+          </header>
+          <p>Our team values creativity, uniqueness, and user experience.
+            We love pursuing new ideas, but we also value simplicity and minimalism.</p>
+        <div id="about-icons">
+            <span class="fas fa-universal-access fa-3x coloraccess home-icons" ></span>
+            <span class="fas fa-pencil-alt fa-3x colorcss home-icons" ></span>
+            <span class="fas fa-terminal fa-3x colorregex home-icons" ></span>
+            <span class="fas fa-code fa-3x colorterminal home-icons" ></span>
+        </div>
+        </section>
+
+        <section id="team-section">
+
+            <div class="teampic teamaccess" id="pic-1">
+              <span class="fas fa-universal-access fa-7x" ></span>
+            </div>
+            <div class="teambio">
+              <h3 class="coloraccess">Oliver</h3>
+              <p>Team Awesome's Accessibility expert.
+                 Expertise creating Semantic HTML structuring Oliver's particular speciality is writing attributes and key handlers that allow for the visually impaired to move through a website in a order and make each element clear and consistent.</p>
+            </div>
+
+            <div class="teambio">
+              <h3 class="colorcss">Michal</h3>
+              <p>Team Awesome's very own CSS presentation expert.
+                 Zurda is a master at responsive design. Focusing mainly on the styling of the webpage, advanced naming conventions using BEM and making sure all content is the same on whatever device is being used. this allows for a smooth transition on all devices.  </p>
+            </div>
+
+            <div class="teampic teamcss" id="pic-2">
+              <span class="fas fa-pencil-alt fa-7x"></span>
+            </div>
+
+
+
+            <div class="teampic teamregex" id="pic-3">
+              <span class="fas fa-terminal fa-7x"></span>
+            </div>
+            <div class="teambio">
+              <h3 class="colorregex">Jason</h3>
+              <p>Team Awesome's Regular expressions specialist.
+                Enabling form and input validatio this will ensure that your database has the valid characters and phrases required for your business needs. For example, your website will only allow the user to submit a valid email address when signing up. </p>
+            </div>
+
+            <div class="teambio">
+              <h3 class="colorterminal">Charmaine</h3>
+              <p>Team Awesome's Command Line guru. Keeping our team in check and allowing us to work in a collaborative way ensure that projects are on time and within budget.</p>
+          </div>
+
+
+          <div class="teampic teamterminal" id="pic-4">
+            <span class="fas fa-code fa-7x"></span>
+          </div>
+
+
+      </section>
+
+      <section id="contact-section">
+        <header>
+          <h2>Contact us</h2>
+        </header>
+
+        <form action='/' method='POST' id="contact_form" class="displayed">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-inputs" pattern="^[^<>]+$" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-inputs" pattern="^[^<>]+$" required>
+          <label for="message" required>Message</label>
+          <textarea name="message" type="submit" value="Submit" id="message" pattern="^[^<>]+$" class="form-inputs"></textarea>
+          <input type="submit" name="submit" id="submit" value="Submit" class="submit-button form-inputs">
+        </form>
+        <div id="successMessage" class="hidden">
+          <h3>Message Subscription:</h3>
+          <p>Great job, you submitted!</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>All rights reserved to Team Awesome FAC-15</p>
+    </footer>
+  </div>
+  <script type="text/javascript" src="./public/js/request.js"></script>
+  <script type="text/javascript" src="./public/js/app.js"></script>
+</body>
+</html>
