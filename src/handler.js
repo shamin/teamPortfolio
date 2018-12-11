@@ -58,7 +58,7 @@ const handlerSubmit = (req, res) => {
           return console.log(err, "Error posting rest data");
         }
         res.writeHead(302, {
-          Location: "http://localhost:5000/#contact-section"
+          Location: "/#contact-section"
         });
         res.end();
       }
