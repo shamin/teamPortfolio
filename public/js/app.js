@@ -1,10 +1,7 @@
 const createTag = (tag, value) => {
   let item = document.createElement(tag);
   if (tag === 'img') {
-    console.log(item);
     item.setAttribute("src", value);  
-    console.log(item);
-
   } else {
     item.textContent = value;
   }

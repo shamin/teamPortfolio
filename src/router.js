@@ -12,8 +12,7 @@ const router = (req, res) => {
     } else if (url.indexOf("public") !== -1) {
       handler.handlerPublic(req, res, url);
     } else {
-      res.writeHead(404, { "Content-Type": "text/html" });
-      res.end("404 not found!");
+      handler.handler404(req, res);
     }
   }
 };
