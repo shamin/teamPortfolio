@@ -9,8 +9,8 @@ tape("test getData function to get a name of user", t => {
       if (err) return console.log("ERROR IN GETDATA: " + err);
       t.equals(
         res[0].name,
-        "Michal",
-        "Name of first user should be 'Michal'"
+        "Example",
+        "Name of first user should be 'Example'"
       );
       t.end();
     });
@@ -24,8 +24,8 @@ tape("test getData function to get email of user", t => {
       if (err) return console.log("ERROR IN GETDATA: " + err);
       t.equals(
         res[0].email,
-        "m.weizman@gmail.com",
-        "Email of first restaurant should be 'm.weizman@gmail.com'"
+        "example@gmail.com",
+        "Email of first contact form should be 'example@gmail.com'"
       );
       t.end();
     });
@@ -39,8 +39,8 @@ tape("test getData function to get message of user", t => {
       if (err) return console.log("ERROR IN GETDATA: " + err);
       t.equals(
         res[0].message,
-        "Get in touch about working together, cheers! Michal",
-        "Message of first restaurant should be 'Get in touch about working together, cheers! Michal'"
+        "Get in touch about working together, cheers! Example",
+        "Message of first contact form should be 'Get in touch about working together, cheers! Example'"
       );
       t.end();
     });

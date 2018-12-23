@@ -1,6 +1,5 @@
 'use strict';
 const databaseConnection = require('../database/db_connection');
-const nodemailer = require('nodemailer');
 
 const postFormData = (name, email, message, cb) => {
     databaseConnection.query(

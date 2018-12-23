@@ -13,9 +13,9 @@ CREATE TABLE contact_form (
 -- Insert default form
 INSERT INTO contact_form (name, email, message) VALUES
 (
-  'Michal Weizman', 
-  'm.weizman@gmail.com', 
-  'Get in touch about working together, cheers! Michal'
+  'Example', 
+  'example@gmail.com', 
+  'Get in touch about working together, cheers! Example'
 );
 
 COMMIT;
