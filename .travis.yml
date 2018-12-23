@@ -6,7 +6,7 @@ services:
   - postgresql
 
 env:
-  - TEST_DB_URL=postgres://test:1234@localhost:5432/travis_ci_test
+  - DB_URL=postgres://test:1234@localhost:5432/travis_ci_test
 
 before_script:
   - psql --version
