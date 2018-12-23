@@ -4,9 +4,6 @@ const postData = require("./queries/postData");
 const qs = require("querystring");
 
 const handlerHome = (request, response) => {
-  const url = request.url;
-  console.log(`requesting the home route, url: ${url}`);
-
   const filePath = path.join(__dirname, "..", "public", "index.html");
   fs.readFile(filePath, (error, file) => {
     if (error) {
@@ -20,8 +17,22 @@ const handlerHome = (request, response) => {
   });
 };
 
+const handler404 = (request, response) => {
+  const url = request.url;
+  const filePath = path.join(__dirname, "..", "public", "404.html");
+  fs.readFile(filePath, (error, file) => {
+    if (error) {
+      console.log(`Error: ${error}`);
+      response.writeHead(500, { "Content-Type": "text/html" });
+      response.end("<h1>Sorry, we'v had a problem on our end</h1>");
+    } else {
+      response.writeHead(404, { "Content-Type": "text/html" });
+      response.end(file);
+    }
+  });
+};
+
 const handlerPublic = (request, response, url) => {
-  console.log(`requesting the public route, url: ${url}`);
   const extension = url.split(".")[1];
   const extensionType = {
     html: "text/html",
@@ -68,6 +79,7 @@ const handlerSubmit = (req, res) => {
 
 module.exports = {
   handlerHome,
+  handler404,
   handlerPublic,
   handlerSubmit
 };
