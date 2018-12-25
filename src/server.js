@@ -4,9 +4,11 @@ const server = http.createServer(router);
 const port = process.env.PORT || 5000;
 
 const startServer = () => {
-  server.listen(port, () => {
+  server.server.listen(port, () => {
     console.log(`Server is listening on http://localhost:${port}`);
   });
 };
 
 startServer();
+
+module.exports = server;
